@@ -1,0 +1,2 @@
+<link rel="preload" as="font" href="fonts/Poppins-Regular.woff2" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" as="font" href="fonts/Syne-Regular.woff2" type="font/woff2" crossorigin="anonymous">

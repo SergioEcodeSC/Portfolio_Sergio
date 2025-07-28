@@ -1,0 +1,149 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+.section_sergio_main {
+    position: relative;
+    padding: 150px 20px 100px;
+    overflow-x: clip;
+    overflow-y: initial;
+    .section_width_sergio_main {
+        position: static;
+        max-width: 1140px;
+        margin: 0 auto;
+        &::after {
+            content: "";
+            display: block;
+            width: 250px;
+            height: 84px;
+            background-color: $c-c2;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-40%, -50%);
+            filter: blur(60px);
+            border: 35px solid #f9ffe5;
+            transition: 0.5s;
+            z-index: -2;
+            @include desktop {
+                background-color: #f9ffe5c2;
+                filter: blur(100px);
+                width: 50%;
+                height: 385px;
+            }
+        }
+        .container_title {
+            width: calc(100% - 40px);
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 600px;
+            z-index: 1;
+            @include desktop {
+                bottom: initial;
+                top: 150px;
+                max-width: 1140px;
+                padding-bottom: 30px;
+            }
+            h1 {
+                font-size: 40px;
+                line-height: 40px;
+                font-family: $secondary;
+                font-weight: normal;
+                color: $c-c2;
+                max-width: 156px;
+                text-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+                transition: 0.3s;
+                @include desktop {
+                    font-size: 100px;
+                    line-height: 100px;
+                    max-width: 400px;
+                }
+                span {
+                    font-size: 18px;
+                    line-height: 30px;
+                    font-family: $primary-semibold;
+                    color: inherit;
+                    text-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+                    width: 100%;
+                    display: inline-block;
+                }
+                strong {
+                    font-size: inherit;
+                    line-height: inherit;
+                    font-family: inherit;
+                    font-weight: inherit;
+                    color: inherit;
+                    margin-left: 50px;
+                }
+            }
+            p {
+                font-size: 10px;
+                line-height: 22px;
+                font-family: $primary-semibold;
+                color: $c-c2;
+                text-transform: uppercase;
+                margin-top: 10px;
+                text-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+                @include desktop {
+                    position: absolute;
+                    bottom: 30px;
+                    left: 0;
+                    font-size: 16px;
+                    line-height: 30px;
+
+                }
+            }
+            h2 {
+                font-size: 18px;
+                line-height: 30px;
+                font-family: $primary-semibold;
+                color: $c-c2;
+                max-width: 230px;
+                margin: 15px 0 0 auto;
+                text-align: end;
+                text-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+                @include desktop {
+                    margin: 20px 0 0 0;
+                    max-width: initial;
+                    display: inline-block;
+                }
+            }
+            .cta_contact {
+                margin: 30px auto 0;
+                transition: 0.3s;
+                @include desktop {
+                    margin: 50px 0 0 auto;
+                }
+            }
+        }
+        picture {
+            max-width: 250px;
+            width: 250px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                mask-image: linear-gradient(
+                    $c-black 80%,
+                    transparent
+                 )
+            }
+        }
+    }
+    .sergio_icon {
+        position: absolute;
+        right: -120px;
+        top: 110px;
+        opacity: 0.7;
+        transition: 0.3s;
+        z-index: -1;
+        @include desktop {
+            right: 110px;
+            top: 180px;
+        }
+    }
+}
